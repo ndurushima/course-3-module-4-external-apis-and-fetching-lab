@@ -1,8 +1,9 @@
+
 /**
  * @jest-environment jsdom
  */
 
-const { fetchWeatherData, displayWeather, displayError } = require('../index')
+const { fetchWeatherData, displayWeather, displayError } = require('../index2')
 
 describe('fetchWeatherData', () => {
   beforeEach(() => {

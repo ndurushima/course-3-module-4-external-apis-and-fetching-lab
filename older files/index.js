@@ -39,6 +39,7 @@ function fetchWeatherData(city) {
       console.error("Error fetching weather data:", error);
       displayError(error)
     });
+
 }
 //fetchWeatherData("Dallas")
 
@@ -63,12 +64,13 @@ function displayWeather(data) {
     `
     weatherDisplay.innerHTML = html
 
-    // const listDetail = document.createElement("li")
-    // listDetail.textContent = `Temperature: ${temperature}°C`;
-    // listDetail.textContent = `Humidity: ${humidity}%`; 
-    // listDetail.textContent = `Condition: ${description}`;
+    
+    const listDetail = document.createElement("li")
+    listDetail.textContent = `Temperature: ${temperature}°C`;
+    listDetail.textContent = `Humidity: ${humidity}%`; 
+    listDetail.textContent = `Condition: ${description}`;
 
-    //weatherDisplay.appendChild(listDetail);
+    weatherDisplay.appendChild(listDetail);
 }
 
 // Step 3: Handle User Input
@@ -83,6 +85,7 @@ document.getElementById("fetch-weather").addEventListener("click", () => {
     document.getElementById("city-input").value = ""
     
 })
+
 
 // Step 4: Implement Error Handling
 // - Create a function `displayError(message)`
